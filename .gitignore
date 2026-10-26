@@ -1,0 +1,8 @@
+.env
+.env.local
+.DS_Store
+api/agent-stage-api
+web/node_modules/
+web/.next/
+web/.vercel/
+*.pem

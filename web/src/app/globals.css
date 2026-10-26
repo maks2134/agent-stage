@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0b0f0e;
+  --color-panel: #121816;
+  --color-cream: #e8efe9;
+  --color-fog: #9aab9f;
+  --color-edge: #2a3830;
+  --color-lime: #c8f135;
+  --font-display: var(--font-syne);
+  --font-sans: var(--font-figtree);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-fade-up: fade-up 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-cream);
+}
+
+::selection {
+  background: rgba(200, 241, 53, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
